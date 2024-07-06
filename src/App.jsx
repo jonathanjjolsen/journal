@@ -1,13 +1,13 @@
-import { useState } from 'react'
-import './App.css'
+import './index.css'; // Import the global css file
+import Header from './components/header'; // Ensure the file name matches exactly
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
+    <div>
+      <Header />
       <p>Hi this is a test.</p>
-    </>
+    </div>
   )
 }
 
