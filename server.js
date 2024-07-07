@@ -1,8 +1,6 @@
 import dotenv from 'dotenv';
 dotenv.config();
 
-console.log('Process Environment:', process.env);
-
 const { MONGODB_URI } = process.env;
 
 if (!MONGODB_URI) {
