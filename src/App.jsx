@@ -1,15 +1,22 @@
-import './index.css'; // Import the global css file
-import Header from './components/header'; // Ensure the file name matches exactly
-import NewEntry from './components/newEntry'; // Ensure the file name matches exactly
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import './index.css';
+import Header from './components/header';
+import Home from './components/home';
+import NewEntry from './components/newEntry';
+import About from './components/about';
 
-function App() {
+const App = () => {
+    return (
+        <Router>
+            <Header />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/new-entry" element={<NewEntry />} />
+                <Route path="/about" element={<About />} />
+            </Routes>
+        </Router>
+    );
+};
 
-  return (
-    <div>
-      <Header />
-      <NewEntry />
-    </div>
-  )
-}
-
-export default App
+export default App;

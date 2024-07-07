@@ -183,3 +183,40 @@ button:focus-visible {
     font-size: 16px;
   }
 }
+
+/* Nav UL CSS */
+
+#navUl {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding-left: 20%;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Specific styles for the navigation links */
+header nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin-right: 15px;
+}
+
+header nav ul li a {
+  color: white; /* Adjust this color to match your design */
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: rgb(44, 169, 188) /* Adjust this color for the hover effect */
+}
