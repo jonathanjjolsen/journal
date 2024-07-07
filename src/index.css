@@ -192,6 +192,12 @@ button:focus-visible {
   justify-content: flex-start;
 }
 
+#title {
+  font-size: 3em;
+  margin-left: .15em;
+
+}
+
 #navUl {
   display: flex;
   list-style: none;

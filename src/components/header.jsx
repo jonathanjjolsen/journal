@@ -8,7 +8,7 @@ const Header = () => {
         <header id='header'>
             <div id='logoDiv'>
                 <img id='logo' src={logo} alt="Logo" />
-                <h1>My Journal</h1>
+                <h1 id='title'>My Journal</h1>
             </div>
             <nav id='navUl'>
                 <ul>
