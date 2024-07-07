@@ -184,11 +184,16 @@ button:focus-visible {
   }
 }
 
-/* Nav UL CSS */
+/* Header CSS */
+
+#logoDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
 
 #navUl {
   display: flex;
-  justify-content: space-between;
   list-style: none;
   padding-left: 20%;
   margin: 0;
@@ -199,10 +204,13 @@ a {
   color: inherit;
   font-family: inherit;
   font-size: inherit;
+  white-space: nowrap;
 }
 
 /* Specific styles for the navigation links */
 header nav ul {
+  display: flex;
+  flex-direction: row;
   list-style-type: none;
   padding: 0;
 }

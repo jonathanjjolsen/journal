@@ -6,8 +6,10 @@ import '../index.css';
 const Header = () => {
     return (
         <header id='header'>
-            <img id='logo' src={logo} alt="Logo" />
-            <h1>My Journal</h1>
+            <div id='logoDiv'>
+                <img id='logo' src={logo} alt="Logo" />
+                <h1>My Journal</h1>
+            </div>
             <nav id='navUl'>
                 <ul>
                     <li><Link to="/">Home</Link></li>
