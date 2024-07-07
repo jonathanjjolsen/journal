@@ -121,3 +121,65 @@ button:focus-visible {
 #logo {
   max-width: 10%;
 }
+
+/* Text Box CSS */
+
+/* Base styles for the text box */
+.text-box {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: 'Georgia', serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+/* Focus state for better accessibility */
+.text-box:focus {
+  border-color: #007bff;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+/* Placeholder styling */
+.text-box::placeholder {
+  color: #aaa;
+}
+
+/* Styles for the scrollbar for better aesthetics */
+.text-box::-webkit-scrollbar {
+  width: 12px;
+}
+
+.text-box::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 6px;
+}
+
+.text-box::-webkit-scrollbar-thumb:hover {
+  background-color: #b3b3b3;
+}
+
+/* Make sure the text box grows and shrinks properly */
+.text-box:active, .text-box:focus {
+  height: auto;
+  min-height: 200px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 600px) {
+  .text-box {
+    padding: 15px;
+    font-size: 16px;
+  }
+}
