@@ -26,6 +26,14 @@ const NewEntry = () => {
             setContent(''); // Clear the textarea after submission
         } catch (err) {
             console.error('Error adding entry:', err);
+            if (err.networkError) {
+                console.error('Network Error:', err.networkError);
+            }
+            if (err.graphQLErrors) {
+                err.graphQLErrors.forEach(({ message, locations, path }) => {
+                    console.error(`GraphQL Error: Message: ${message}, Location: ${locations}, Path: ${path}`);
+                });
+            }
         }
     };
 

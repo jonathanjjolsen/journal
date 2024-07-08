@@ -7,22 +7,15 @@ const resolvers = {
         }
     },
     Mutation: {
-        async createEntry(_, {body}) {
-            const newEntry = new Entry({
-                body,
-                createdAt: new Date().toISOString()
-            });
-
-            return await newEntry.save(); //MongoDB save method
+        createEntry: async (_, { content }) => {
+          const entry = new Entry({
+            content,
+            createdAt: new Date().toISOString(),
+          });
+          await entry.save();
+          return entry;
         },
-        async deleteEntry(_, {entryId}) {
-            await Entry.findByIdAndDelete(entryId);
-            return 'Entry deleted';
-        },
-        async editEntry(_, {entryId, body}) {
-            return await Entry.findByIdAndUpdate(entryId, {body}, {new: true});
-        }
-    }
+      },
 };
 
 export default resolvers;
