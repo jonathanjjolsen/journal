@@ -1,11 +1,16 @@
-import { Schema, model } from 'mongoose';
+import mongoose from 'mongoose';
 
-const entrySchema = new Schema({
-    content: String,
-    createdAt: {
-        type: String,
-        default: () => new Date().toISOString(),
-    },
+const entrySchema = new mongoose.Schema({
+  body: {
+    type: String,
+    required: true // Ensure body is required
+  },
+  createdAt: {
+    type: String,
+    required: true
+  }
 });
 
-export default model('Entry', entrySchema);
+const Entry = mongoose.model('Entry', entrySchema);
+
+export default Entry;
